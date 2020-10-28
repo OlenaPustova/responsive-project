@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="wrapper menu-open">
+    <div id="wrapperID" class="wrapper">
         <header class="header">
             <a href="#" class="logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="60" fill="none" viewBox="0 0 100 60">
@@ -26,7 +26,7 @@
                 <li class="nav-item"><a class="nav-link" href="#">contact us</a></li>
             </ul>
 
-            <button class="btn-burger">
+            <button id="burgerID" class="btn-burger">
                 <span class="btn-burger-line"></span>
             </button>
             <form class="contact-form">
@@ -102,6 +102,15 @@
 
         </section>
     </div>
+    <script type="text/javascript">
+        let wrapper = document.querySelector("#wrapperID");
+        let burger = document.querySelector("#burgerID");
+
+        burger.onclick = function () {
+            wrapper.classList.toggle('menu-open');
+
+        }
+    </script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
