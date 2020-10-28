@@ -155,12 +155,47 @@ display: none;
 .carousel .slick-dots li.slick-active button {
     background: #000;
 }
-
+/*content*/
+.content {
+    width: 1024px;
+    margin: 0 auto;
+}
 /* about */
-
-
+.about {
+    text-align: center;
+    border-bottom: 1px solid #000;
+    padding: 80px 0;
+}
 /* info */
-
+.info {
+    border-bottom: 1px solid #000;
+}
+.title {
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    padding: 16px 0 15px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+}
+.box {
+    display: flex;
+    align-items: center;
+    padding: 70px 50px 50px;
+    width: 500px;
+    background-color: #000;
+    color: #fff;
+    font-size:  18px;
+    line-height: 22px;
+}
+.date {
+    font-size: 48px;
+    line-height: 22px;
+}
 
 /* contact */
 
@@ -204,6 +239,12 @@ and (max-width: 1200px) {
     .menu-open .header .contact-form {
         display: block;
     }
+    /*.content {
+    width: 928px;
+    }
+    .container {
+    display: block;
+    }*/
 }
 
 @media only screen
