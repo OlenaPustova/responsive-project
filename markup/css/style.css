@@ -199,14 +199,6 @@ display: none;
 
 /* contact */
 
-
-
-
-
-
-
-
-
 /* tablet */
 @media only screen
 and (min-width: 1025px)
@@ -239,12 +231,28 @@ and (max-width: 1200px) {
     .menu-open .header .contact-form {
         display: block;
     }
-    /*.content {
+    /*content*/
+    .content {
     width: 928px;
     }
+    .about {
+        font-size: 20px;
+        line-height: 24px;
+        padding: 48px 52px;
+    }
+    .title {
+        font-size: 28px;
+        line-height: 34px;
+    }
     .container {
-    display: block;
-    }*/
+        display: block;
+        padding: 32px 0 0;
+    }
+    .box {
+        width: auto;
+        margin: 0 0 32px;
+        padding: 67px 48px 48px;
+    }
 }
 
 @media only screen
@@ -292,6 +300,35 @@ and (max-width: 768px) {
     }
     .menu-open .btn-burger .btn-burger-line:after {
         display: none;
+    }
+    /*content*/
+    .content {
+        width: 335px;
+    }
+    .about {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 29px 0;
+    }
+    .title {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .container {
+        display: block;
+        padding: 24px 0 0;
+    }
+    .box {
+        width: auto;
+        margin: 0 0 24px;
+        padding: 20px 20px 27px;
+        font-size:  16px;
+        line-height: 20px;
+    }
+    .date {
+        display: block;
+        font-size: 24px;
+        line-height: 29px;
     }
 }
 
