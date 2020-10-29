@@ -107,9 +107,8 @@ body {
     height: 5px;
     background: #000;
     display: block;
-    transition: all .5s ease-in-out;
+    transition: .5s ease-in-out;
 }
-
 .btn-burger-line:before,
 .btn-burger-line:after {
     content: "";
@@ -122,16 +121,10 @@ body {
     outline: none;
     top: 0;
     left: 0;
-    transition: all .5s ease-in-out;
-    
+    transition: .5s ease-in-out;
 }
-/* .btn-burger-line:before {
-    transition: .25s ease-in-out;
-} */
-
 .btn-burger-line:after{
     top: 26px;
-
 }
 
 
@@ -196,29 +189,23 @@ and (max-width: 1200px) {
     }
     .menu-open .header {
         background: #000;
-        transition: .5s ease-in-out;
+        transition: .25s ease-in-out;
     }
     .menu-open .logo svg * {
         fill: #fff;
     }
-    .menu-open .btn-burger .btn-burger-line,
+    .menu-open .btn-burger .btn-burger-line:after,
     .menu-open .btn-burger .btn-burger-line:before {
         background: #fff;
     }
     .menu-open .btn-burger .btn-burger-line {
-        /* transform: translateX(-50px);
-        background: transparent; */
-        transform: rotate(45deg);
+        background: transparent;
     }
     .menu-open .btn-burger .btn-burger-line:before {
-        /* transform: rotate(45deg) translate(35px, -35px); */
-        transform: rotate(90deg);
+        transform: rotate(45deg) translate(6px, 12px);
     }
     .menu-open .btn-burger .btn-burger-line:after {
-        /* background: #fff; */
-
-        /* transform: rotate(-45deg) translate(53px, 17px); */
-        display: none;
+        transform: rotate(-45deg) translate(6px, -12px);
     }
     .menu-open .header .contact-form {
         display: block;
@@ -236,22 +223,23 @@ and (max-width: 1024px) {
     }
     .menu-open .header {
         background: #000;
+        transition: .25s ease-in-out;
     }
     .menu-open .logo svg * {
         fill: #fff;
     }
-    .menu-open .btn-burger .btn-burger-line,
+    .menu-open .btn-burger .btn-burger-line:after,
     .menu-open .btn-burger .btn-burger-line:before {
         background: #fff;
     }
     .menu-open .btn-burger .btn-burger-line {
-        transform: rotate(45deg);
+        background: transparent;
     }
     .menu-open .btn-burger .btn-burger-line:before {
-        transform: rotate(90deg);
+        transform: rotate(45deg) translate(6px, 12px);
     }
     .menu-open .btn-burger .btn-burger-line:after {
-        display: none;
+        transform: rotate(-45deg) translate(6px, -12px);
     }
     .menu-open .header .contact-form {
         display: block;
@@ -265,11 +253,6 @@ and (max-width: 768px) {
     .btn-burger {
         display: block;
     }
-    /* .btn-burger-line,
-    .btn-burger-line:before,
-    .btn-burger-line:after {
-        background: #fff;
-    } */
     .nav {
         display: none;
     }
@@ -282,28 +265,28 @@ and (max-width: 768px) {
     .menu-open .logo svg * {
         fill: #fff;
     }
-    .menu-open .header .contact-form {
-        display: block;
-    }
-    .menu-open .btn-burger .btn-burger-line,
+    .menu-open .btn-burger .btn-burger-line:after,
     .menu-open .btn-burger .btn-burger-line:before {
         background: #fff;
     }
     .menu-open .btn-burger .btn-burger-line {
-        transform: rotate(45deg);
+        background: transparent;
     }
     .menu-open .btn-burger .btn-burger-line:before {
-        transform: rotate(90deg);
+        transform: rotate(45deg) translate(6px, 12px);
     }
     .menu-open .btn-burger .btn-burger-line:after {
-        display: none;
+        transform: rotate(-45deg) translate(6px, -12px);
+    }
+    .menu-open .header .contact-form {
+        display: block;
     }
 }
 
 
 @media only screen
 and (min-width: 0)
-and (max-width: 375px) {
+and (max-width: 376px) {
     .btn-burger {
         display: block;
     }
@@ -316,18 +299,18 @@ and (max-width: 375px) {
     .menu-open .logo svg * {
         fill: #fff;
     }
-    .menu-open .btn-burger .btn-burger-line,
+    .menu-open .btn-burger .btn-burger-line:after,
     .menu-open .btn-burger .btn-burger-line:before {
         background: #fff;
     }
     .menu-open .btn-burger .btn-burger-line {
-        transform: rotate(45deg);
+        background: transparent;
     }
     .menu-open .btn-burger .btn-burger-line:before {
-        transform: rotate(90deg);
+        transform: rotate(45deg) translate(6px, 12px);
     }
     .menu-open .btn-burger .btn-burger-line:after {
-        display: none;
+        transform: rotate(-45deg) translate(6px, -12px);
     }
     .menu-open .header .contact-form {
         display: block;
