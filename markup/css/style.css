@@ -92,6 +92,7 @@ body {
 .list {
     display: none;
     justify-content: center;
+    margin-bottom: 80px;
 }
 .list-item {
     margin: 0 40px;
@@ -146,22 +147,58 @@ body {
 
 
 /* form  */
-.header .contact-form {
-display: none;
+.header-form {
+    border: 1px solid #fff;
+	display: none;
+	position: relative;
 }
-
+.header-textarea {
+    margin: 0;
+    min-height: 120px;
+	max-height: 120px;
+	max-width: 100%;
+	min-width: 100%;
+    padding: 49px 235px 49px 30px;
+	border: none;
+	font: 18px Montserrat;
+	background-color: #000;
+    color: #fff;
+    /* opacity: 0.5; */
+	overflow: auto;
+	outline: none;
+} 
+.header-textarea:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.header-button {
+	font: 28px Montserrat;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+    width: 200px;
+    height: 60px;
+    background: #fff;
+    color: #000;
+    border-radius: 8px;
+    text-transform: uppercase;
+    padding: 0;
+	border: none;
+	outline: none;
+}
 
 /* carouse */
 .carousel img {
     width: 400px;
     height: 200px;
+	margin: 0 auto;
 }
 .carousel .slick-dots {
     display: flex;
     justify-content: center;
 }
 .carousel .slick-dots li {
-    margin: 0 5px;
+    margin: 40px 5px;
 }
 .carousel .slick-dots li button {
     width: 20px;
@@ -248,7 +285,7 @@ display: none;
     outline: none;
 }
 .textarea::placeholder {
-    line-height: 120px;
+    line-height: 112px;
     transition: opacity 0.3s ease;
     text-overflow:ellipsis;
 }
@@ -297,7 +334,7 @@ and (max-width: 1200px) {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 5;
+        z-index: 1;
         width: 100%;
         height: 600px;
     }
@@ -320,9 +357,10 @@ and (max-width: 1200px) {
     .menu-open .btn-burger .btn-burger-line:after {
         transform: rotate(-45deg) translate(6px, -12px);
     }
-    .menu-open .header .contact-form {
-        display: block;
+    .menu-open .header-form {
+        display: flex;
     }
+    
     /*content*/
     .content {
     width: 928px;
@@ -348,7 +386,6 @@ and (max-width: 1200px) {
     }
 }
 
-
 @media only screen
 and (min-width: 769px)
 and (max-width: 1024px) {
@@ -358,13 +395,23 @@ and (max-width: 1024px) {
     .nav {
         display: none;
     }
+    .header {
+		padding: 48px 0 96px;
+	}
+	.logo {
+		margin: 0 auto;
+	}
+	.carousel .slick-dots li {
+		margin: 39px 5px 49px;
+		font-size: 0;
+	}
     .menu-open .carousel {
         margin-top: 192px;
     }
     .menu-open .header {
         background: #000;
         padding: 48px;
-        transition: .25s ease-in-out;
+        transition: background .25s ease-in-out;
         position: absolute;
         top: 0;
         left: 0;
@@ -392,9 +439,10 @@ and (max-width: 1024px) {
     .menu-open .btn-burger .btn-burger-line:after {
         transform: rotate(-45deg) translate(6px, -12px);
     }
-    .menu-open .header .contact-form {
-        display: block;
+    .menu-open .header-form {
+        display: flex;
     }
+
     /*content*/
     .content {
     width: 928px;
@@ -422,6 +470,7 @@ and (max-width: 1024px) {
 
 
 /* mobile */
+
 @media only screen
 and (min-width: 376px)
 and (max-width: 768px) {
@@ -430,14 +479,16 @@ and (max-width: 768px) {
         top: 23px;
         left: 20px;
     }
-    .nav {
-        display: none;
-    }
     .menu-open .header {
         background: #000;
+        /* height: 100vh; */
+        position: relative;
     }
-    .menu-open .logo {
-        margin: 0 0 80px auto;
+	.menu-open .logo {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 2;
     }
     .menu-open .logo svg * {
         fill: #fff;
@@ -455,9 +506,10 @@ and (max-width: 768px) {
     .menu-open .btn-burger .btn-burger-line:after {
         transform: rotate(-45deg) translate(6px, -12px);
     }
-    .menu-open .header .contact-form {
-        display: block;
+    .menu-open .header-form {
+        display: flex;
     }
+    
     /*content*/
     .content {
         width: 335px;
@@ -502,7 +554,7 @@ and (max-width: 768px) {
     .button{
 
     }
-
+}
 @media only screen
 and (min-width: 0)
 and (max-width: 375px) {
@@ -510,15 +562,33 @@ and (max-width: 375px) {
         display: block;
         top: 23px;
         left: 20px;
+        z-index: 1;
     }
+    .btn-burger-line,
+	.btn-burger-line:before,
+	.btn-burger-line:after {
+		background: #fff;
+	}
     .nav {
         display: none;
     }
+    .logo {
+		display: none;
+    }
+    .header {
+		position: absolute;
+	}
     .menu-open .header {
         background: #000;
+        position: absolute;
+    }
+	.menu-open .logo {
+        top: 20px;
+        right: 20px;
     }
     .menu-open .logo svg * {
         fill: #fff;
+
     }
     .menu-open .btn-burger .btn-burger-line:after,
     .menu-open .btn-burger .btn-burger-line:before {
@@ -533,10 +603,11 @@ and (max-width: 375px) {
     .menu-open .btn-burger .btn-burger-line:after {
         transform: rotate(-45deg) translate(6px, -12px);
     }
-    .menu-open .header .contact-form {
+    .menu-open .header .form {
         display: block;
     }
 
+    
     /*content*/
     .content {
         width: 335px;
