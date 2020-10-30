@@ -222,6 +222,72 @@ display: none;
 
 /* contact */
 
+.contact-form{
+    width: 90%;
+    margin: 0 auto 80px;    
+}
+.area{
+    border: 1px solid #000;
+    display: flex;
+}
+.textarea{
+    margin: 0;
+    padding: 0;
+    width: 75%;
+    min-height: 120px;
+    max-height: 120px;
+    border: none;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+    opacity: 0.5;
+    padding: 5px 0px 5px 30px;
+    overflow: auto;
+    flex-grow: 1;
+} 
+.textarea:focus {
+    outline: none;
+}
+.textarea::placeholder {
+    line-height: 120px;
+    transition: opacity 0.3s ease;
+    text-overflow:ellipsis;
+}
+.textarea:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.button{
+    width: 200px;
+    height: 60px;
+    background: #000;
+    color: #fff;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    border-radius: 8px;
+    text-transform: uppercase;
+    margin: 30px;
+    padding: 0;
+    border: 0;
+}
+.button: hover{
+}
+.title{
+    font-size: 40px;
+    line-height: 34px;
+    text-align: center;
+    color: #000;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 16px 0px;
+    margin: 32px 0px;
+}
+
+
+
+
+
 /* tablet */
 @media only screen
 and (min-width: 1025px)
@@ -292,6 +358,7 @@ and (max-width: 1200px) {
         padding: 67px 48px 48px;
     }
 }
+
 
 @media only screen
 and (min-width: 769px)
@@ -364,6 +431,7 @@ and (max-width: 1024px) {
     }
 }
 
+
 /* mobile */
 @media only screen
 and (min-width: 376px)
@@ -431,8 +499,25 @@ and (max-width: 768px) {
         font-size: 24px;
         line-height: 29px;
     }
-}
+    /* contact */
+    .contact-form{
+    margin: 0 auto 50px; 
+    }
+    .title{
+    font-size: 20px;
+    line-height: 24px;
+    margin: 24px 0px;
+    }
+    .area {
+ 
+    }   
+    .textarea{
+    min-height: 150px;
+    max-height: 150px;
+    }
+    .button{
 
+    }
 
 @media only screen
 and (min-width: 0)
