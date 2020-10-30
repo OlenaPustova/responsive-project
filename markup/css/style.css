@@ -175,7 +175,7 @@ display: none;
 .textarea{
     margin: 0;
     padding: 0;
-    width: 75%;
+    flex-basis: 75%;
     min-height: 120px;
     max-height: 120px;
     border: none;
@@ -183,17 +183,18 @@ display: none;
     line-height: 22px;
     color: #000;
     opacity: 0.5;
-    padding: 5px 0px 5px 30px;
+    padding: 0px 0px 0px 30px;
     overflow: auto;
     flex-grow: 1;
+    resize: none;
 } 
 .textarea:focus {
     outline: none;
 }
 .textarea::placeholder {
-    line-height: 120px;
+    line-height: 110px;
+    opacity: 1;
     transition: opacity 0.3s ease;
-    text-overflow:ellipsis;
 }
 .textarea:focus::placeholder {
     opacity: 0;
@@ -212,8 +213,10 @@ display: none;
     margin: 30px;
     padding: 0;
     border: 0;
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.8);
 }
-.button: hover{
+.button:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 .title{
     font-size: 40px;
@@ -225,11 +228,6 @@ display: none;
     padding: 16px 0px;
     margin: 32px 0px;
 }
-
-
-
-
-
 /* tablet */
 @media only screen
 and (min-width: 1025px)
@@ -262,13 +260,11 @@ and (max-width: 1200px) {
     .menu-open .header .contact-form {
         display: block;
     }
-
-
+}
 @media only screen
 and (min-width: 769px)
 and (max-width: 1024px) {
-
-
+}
 /* mobile */
 @media only screen
 and (min-width: 376px)
@@ -311,26 +307,69 @@ and (max-width: 768px) {
     }
     /* contact */
     .contact-form{
-    margin: 0 auto 50px; 
+        margin: 0 auto 50px; 
     }
     .title{
-    font-size: 20px;
-    line-height: 24px;
-    margin: 24px 0px;
+        font-size: 20px;
+        line-height: 24px;
+        margin: 24px 0px;
     }
-    .area {
- 
+    .contact-form .form .area{
+        border: none;
+        display: block;
     }   
-    .textarea{
-    min-height: 150px;
-    max-height: 150px;
+    .form .area .textarea{
+        min-height: 150px;
+        max-height: 150px;
+        width: 100%;
+        border: 1px solid #000;
+        padding: 0px 30px;
+        margin: 0px 0px 19px 0px;
     }
-    .button{
-
+     .form .area .button{
+        width: 100%;
+        height: 60px;
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0;
     }
-
+    .textarea::placeholder {
+        text-align: center;
+        line-height: 22px;
+    }
+}
 @media only screen
 and (min-width: 0)
 and (max-width: 375px) {
-
+    .contact-form{
+        margin: 0 auto 50px; 
+    }
+    .title{
+        font-size: 20px;
+        line-height: 24px;
+        margin: 24px 0px;
+    }
+    .contact-form .form .area{
+        border: none;
+        display: block;
+    }   
+    .form .area .textarea{
+        min-height: 150px;
+        max-height: 150px;
+        width: 100%;
+        border: 1px solid #000;
+        margin: 0px 0px 19px 0px;
+        padding: 0px 30px;
+    }
+     .form .area .button{
+        width: 100%;
+        height: 60px;
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0;
+    }
+    .textarea::placeholder {
+        text-align: center;
+        line-height: 22px;
+    }
 }
