@@ -258,6 +258,10 @@ body {
 	.logo {
 		margin: 0 auto;
 	}
+	.logo svg {
+		width: 80px;
+		height: 48px;
+	}
 	.carousel .slick-dots li {
 		margin: 39px 5px 49px;
 		font-size: 0;
@@ -284,24 +288,6 @@ body {
 	}
 	.menu-open .header .contact-form {
 		display: block;
-	}
-}
-@media only screen and (min-width: 376px) and (max-width: 417px) {
-	.header {
-		padding: 22px 0 0;
-	}
-	.btn-burger {
-		top: 23px;
-		left: 20px;
-	}
-	.carousel .slick-dots li {
-		margin: 24px 4px;
-		font-size: 0;
-	}
-	.carousel .slick-dots li button {
-		width: 8px;
-		height: 8px;
-		border: solid 1px #000000;
 	}
 }
 
