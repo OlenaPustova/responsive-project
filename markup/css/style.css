@@ -201,6 +201,7 @@ display: none;
     transition: opacity 0.3s ease;
 }
 .button{
+    font-family: 'Montserrat', sans-serif;
     width: 200px;
     height: 60px;
     background: #000;
