@@ -4,7 +4,6 @@
  box-sizing: border-box;
 }
 
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -58,11 +57,11 @@ table {
 body {
     font: 28px 'Montserrat', sans-serif;
 }
-
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
 }
+
 /* header */
 .header {
     padding: 80px 0;
@@ -145,12 +144,11 @@ body {
     left: 0;
     transition: .5s ease-in-out;
 }
-.btn-burger-line:after{
+.btn-burger-line:after {
     top: 26px;
 }
 
-
-/* form  */
+/* header form  */
 .header-form {
     border: 1px solid #fff;
 	display: none;
@@ -161,25 +159,21 @@ body {
     margin: 0;
     width: 100%;
     height: 100%;
-	/* max-width: 100%;
-	min-width: 100%; */
     padding: 48px 235px 48px 30px;
 	border: none;
-	font: 18px Montserrat;
+	font: 18px 'Montserrat', sans-serif;
 	background-color: #000;
     color: #fff;
-    /* opacity: 0.5; */
 	overflow: auto;
     outline: none;
     resize: none;
-    
 } 
 .header-textarea:focus::placeholder {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 .header-button {
-	font: 28px Montserrat;
+	font: 28px 'Montserrat', sans-serif;
 	position: absolute;
 	top: 30px;
 	right: 30px;
@@ -194,15 +188,13 @@ body {
     outline: none;
     cursor: pointer;
     transition: transform 0.5s ease;
-
 }
-
 .header-button:hover {
     background: rgba(255, 255, 255, 0.8);
     transform: scale(1.1);
 }
 
-/* carouse */
+/* carousel */
 .carousel img {
     width: 400px;
     height: 200px;
@@ -229,18 +221,17 @@ body {
 .carousel .slick-dots li.slick-active button {
     background: #000;
 }
+
 /*content*/
 .content {
     max-width: 1024px;
     margin: 0 auto;
 }
-/* about */
 .about {
     text-align: center;
     border-bottom: 1px solid #000;
     padding: 0 0 80px 0;
 }
-/* info */
 .info {
     border-bottom: 1px solid #000;
 }
@@ -272,54 +263,49 @@ body {
     line-height: 22px;
 }
 
-/* contact */
+/* form */
 .contact-form .title {
     margin-bottom: 47px;
 }
-.contact-form{
+.contact-form {
     width: 100%;
     margin: 0 auto 80px;    
 }
-.area{
+.area {
     border: 1px solid #000;
     display: flex;
 }
-.textarea{
+.textarea {
+    font: 18px 'Montserrat', sans-serif;
     margin: 0;
-    padding: 0;
     flex-basis: 75%;
     min-height: 120px;
     max-height: 120px;
     border: none;
-    font-size: 18px;
     line-height: 22px;
     color: #000;
     opacity: 0.5;
-    padding: 5px 0px 5px 30px;
+    padding: 5px 0 5px 30px;
     overflow: auto;
     flex-grow: 1;
     resize: none;
-
 } 
 .textarea:focus {
     outline: none;
 }
 .textarea::placeholder {
     line-height: 112px;
-    transition: opacity 0.3s ease;
-    text-overflow:ellipsis;
 }
 .textarea:focus::placeholder {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-.button{
-    font-family: 'Montserrat', sans-serif;
+.button {
+    font: 28px 'Montserrat', sans-serif;
     width: 200px;
     height: 60px;
     background: #000;
     color: #fff;
-    font-size: 28px;
     line-height: 34px;
     text-align: center;
     border-radius: 8px;
@@ -337,13 +323,12 @@ body {
 }
 
 
-
-
-
 /* tablet */
 @media only screen
 and (min-width: 1025px)
 and (max-width: 1200px) {
+
+    /* header */
     .header {
 		padding: 48px 0 96px;
 	}
@@ -354,15 +339,13 @@ and (max-width: 1200px) {
         display: none;
         
     }
-    .logo {
+    .logo, .logo svg {
         margin: 0 auto;
         width: 80px;
         height: 48px;
     }
-    .logo svg {
-        width: 80px;
-        height: 48px;
-    }
+
+    /* menu open */
     .menu-open .carousel {
         margin-top: 192px;
     }
@@ -379,15 +362,9 @@ and (max-width: 1200px) {
     }
     .menu-open .logo {
         margin-bottom: 124px;
-        width: 80px;
-        height: 48px;
     }
     .menu-open .logo svg * {
         fill: #fff;
-    }
-    .menu-open .logo svg {
-        width: 80px;
-        height: 48px;
     }
     .menu-open .list {
         display: flex;
@@ -408,7 +385,7 @@ and (max-width: 1200px) {
     .menu-open .header-form {
         display: flex;
     }
-    
+
     /*content*/
     .content {
         max-width: 928px;
@@ -440,6 +417,8 @@ and (max-width: 1024px) {
     .wrapper {
         max-width: 1024px;
     }
+
+    /* header */
     .btn-burger {
         display: block;
     }
@@ -449,19 +428,19 @@ and (max-width: 1024px) {
     .header {
 		padding: 48px 0 96px;
 	}
-	.logo {
+	.logo, .logo svg {
         margin: 0 auto;
         width: 80px;
         height: 48px;
     }
-    .logo svg {
-        width: 80px;
-        height: 48px;
-    }
+
+    /* carousel */
 	.carousel .slick-dots li {
 		margin: 39px 5px 49px;
 		font-size: 0;
-	}
+    }
+
+    /* menu-open */
     .menu-open .carousel {
         margin-top: 192px;
     }
@@ -478,15 +457,9 @@ and (max-width: 1024px) {
     }
     .menu-open .logo {
         margin-bottom: 124px;
-        width: 80px;
-        height: 48px;
     }
     .menu-open .logo svg * {
         fill: #fff;
-    }
-    .menu-open .logo svg {
-        width: 80px;
-        height: 48px;
     }
     .menu-open .list {
         display: flex;
@@ -509,7 +482,7 @@ and (max-width: 1024px) {
         display: flex;
     }
 
-    /*content*/
+    /* content */
     .content {
     max-width: 928px;
     padding: 0 20px;
@@ -533,17 +506,19 @@ and (max-width: 1024px) {
         margin: 0 0 32px;
         padding: 67px 48px 48px;
     }
+
+    /* form */
     .contact-form .title {
         margin-bottom: 32px;
     }
 }
 
-
 /* mobile */
-
 @media only screen
 and (min-width: 376px)
 and (max-width: 768px) {
+
+    /* header */
     .btn-burger {
         display: block;
         top: 23px;
@@ -552,6 +527,14 @@ and (max-width: 768px) {
     .nav {
         display: none;
     }
+    .header {
+		padding: 48px 0 60px;
+    }
+    .logo, .logo svg {
+        margin: 0 auto;
+    }
+
+    /* menu-open */
     .menu-open .header {
         background: #000;
         height: 100vh;
@@ -607,16 +590,16 @@ and (max-width: 768px) {
     }
     .menu-open .header-button {
         top: 169px;
-		left: 0px;
+		left: 0;
 		width: 100%;
     }
     .menu-open .header-textarea {
 		text-align: center;
 		padding: 20px;
 		height: 150px;
-	}
-    
-    /*content*/
+    }
+
+    /* content */
     .content {
         max-width: 728px;
         padding: 0 20px;
@@ -647,23 +630,24 @@ and (max-width: 768px) {
         font-size: 24px;
         line-height: 29px;
     }
-    /* contact */
-    .contact-form{
+
+    /* form */
+    .contact-form {
     margin: 0 auto 50px; 
     }
-    .contact-form .form .area{
+    .contact-form .form .area {
         border: none;
         display: block;
     }   
-    .form .area .textarea{
+    .form .area .textarea {
         min-height: 150px;
         max-height: 150px;
         width: 100%;
         border: 1px solid #000;
-        padding: 0px 30px;
-        margin: 0px 0px 19px 0px;
+        padding: 0 30px;
+        margin: 0 0 19px 0;
     }
-    .form .area .button{
+    .form .area .button {
         width: 100%;
         height: 60px;
         font-size: 24px;
@@ -675,9 +659,12 @@ and (max-width: 768px) {
         line-height: 22px;
     }
 }
+
 @media only screen
 and (min-width: 0)
 and (max-width: 376px) {
+
+    /* header */
     .btn-burger {
         display: block;
         top: 23px;
@@ -705,7 +692,7 @@ and (max-width: 376px) {
 	.carousel .slick-dots li button {
 		width: 8px;
 		height: 8px;
-		border: solid 1px #000000;
+		border: solid 1px #000;
 	}
     .menu-open .header {
         background: #000;
@@ -764,7 +751,7 @@ and (max-width: 376px) {
     }
     .menu-open .header-button {
         top: 169px;
-		left: 0px;
+		left: 0;
 		width: 100%;
     }
     .menu-open .header-textarea {
@@ -773,7 +760,6 @@ and (max-width: 376px) {
 		height: 150px;
 	}
 
-    
     /*content*/
     .content {
         max-width: 375px;
@@ -805,25 +791,24 @@ and (max-width: 376px) {
         font-size: 24px;
         line-height: 29px;
     }
-    
-    /* form  */
 
-    .contact-form{
+    /* form  */
+    .contact-form {
         margin: 0 auto 50px; 
     }
-    .contact-form .form .area{
+    .contact-form .form .area {
         border: none;
         display: block;
     }   
-    .form .area .textarea{
+    .form .area .textarea {
         min-height: 150px;
         max-height: 150px;
         width: 100%;
         border: 1px solid #000;
-        margin: 0px 0px 19px 0px;
-        padding: 0px 30px;
+        margin: 0 0 19px 0;
+        padding: 0 30px;
     }
-    .form .area .button{
+    .form .area .button {
         width: 100%;
         height: 60px;
         font-size: 24px;
