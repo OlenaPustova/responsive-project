@@ -398,7 +398,6 @@ and (max-width: 1200px) {
     .title {
         font-size: 28px;
         line-height: 34px;
-        margin: 0 0 32px;
     }
     .container {
         display: block;
@@ -408,6 +407,11 @@ and (max-width: 1200px) {
         width: auto;
         margin: 0 0 32px;
         padding: 67px 48px 48px;
+    }
+
+    /* form */
+    .contact-form .title {
+        margin-bottom: 32px;
     }
 }
 
@@ -635,6 +639,9 @@ and (max-width: 768px) {
     .contact-form {
     margin: 0 auto 50px; 
     }
+    .contact-form .title {
+        margin-bottom: 24px;
+    }
     .contact-form .form .area {
         border: none;
         display: block;
@@ -644,7 +651,7 @@ and (max-width: 768px) {
         max-height: 150px;
         width: 100%;
         border: 1px solid #000;
-        padding: 0 30px;
+        padding: 20px;
         margin: 0 0 19px 0;
     }
     .form .area .button {
@@ -796,6 +803,9 @@ and (max-width: 376px) {
     .contact-form {
         margin: 0 auto 50px; 
     }
+    .contact-form .title {
+        margin-bottom: 24px;
+    }
     .contact-form .form .area {
         border: none;
         display: block;
@@ -806,7 +816,7 @@ and (max-width: 376px) {
         width: 100%;
         border: 1px solid #000;
         margin: 0 0 19px 0;
-        padding: 0 30px;
+        padding: 20px;
     }
     .form .area .button {
         width: 100%;
