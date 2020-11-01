@@ -59,6 +59,10 @@ body {
     font: 28px 'Montserrat', sans-serif;
 }
 
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 /* header */
 .header {
     padding: 80px 0;
@@ -150,15 +154,16 @@ body {
 .header-form {
     border: 1px solid #fff;
 	display: none;
-	position: relative;
+    position: relative;
+    height: 120px;
 }
 .header-textarea {
     margin: 0;
-    min-height: 120px;
-	max-height: 120px;
-	max-width: 100%;
-	min-width: 100%;
-    padding: 49px 235px 49px 30px;
+    width: 100%;
+    height: 100%;
+	/* max-width: 100%;
+	min-width: 100%; */
+    padding: 48px 235px 48px 30px;
 	border: none;
 	font: 18px Montserrat;
 	background-color: #000;
@@ -188,6 +193,13 @@ body {
 	border: none;
     outline: none;
     cursor: pointer;
+    transition: transform 0.5s ease;
+
+}
+
+.header-button:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
 }
 
 /* carouse */
@@ -201,7 +213,7 @@ body {
     justify-content: center;
 }
 .carousel .slick-dots li {
-    margin: 40px 5px;
+    margin: 40px 5px 80px;
 }
 .carousel .slick-dots li button {
     width: 20px;
@@ -219,14 +231,14 @@ body {
 }
 /*content*/
 .content {
-    width: 1024px;
+    max-width: 1024px;
     margin: 0 auto;
 }
 /* about */
 .about {
     text-align: center;
     border-bottom: 1px solid #000;
-    padding: 80px 0;
+    padding: 0 0 80px 0;
 }
 /* info */
 .info {
@@ -261,7 +273,9 @@ body {
 }
 
 /* contact */
-
+.contact-form .title {
+    margin-bottom: 47px;
+}
 .contact-form{
     width: 100%;
     margin: 0 auto 80px;    
@@ -300,6 +314,7 @@ body {
     transition: opacity 0.3s ease;
 }
 .button{
+    font-family: 'Montserrat', sans-serif;
     width: 200px;
     height: 60px;
     background: #000;
@@ -314,7 +329,7 @@ body {
     border: 0;
     outline: none;
     transition: transform 0.5s ease;
-
+    cursor: pointer;
 }
 .button:hover {
     background: rgba(0, 0, 0, 0.8);
@@ -396,12 +411,12 @@ and (max-width: 1200px) {
     
     /*content*/
     .content {
-    width: 928px;
+        max-width: 928px;
     }
     .about {
         font-size: 20px;
         line-height: 24px;
-        padding: 48px 52px;
+        padding: 0 52px 48px;
     }
     .title {
         font-size: 28px;
@@ -422,6 +437,9 @@ and (max-width: 1200px) {
 @media only screen
 and (min-width: 769px)
 and (max-width: 1024px) {
+    .wrapper {
+        max-width: 1024px;
+    }
     .btn-burger {
         display: block;
     }
@@ -493,12 +511,13 @@ and (max-width: 1024px) {
 
     /*content*/
     .content {
-    width: 928px;
+    max-width: 928px;
+    padding: 0 20px;
     }
     .about {
         font-size: 20px;
         line-height: 24px;
-        padding: 48px 52px;
+        padding: 0 52px 48px;
     }
     .title {
         font-size: 28px;
@@ -513,6 +532,9 @@ and (max-width: 1024px) {
         width: auto;
         margin: 0 0 32px;
         padding: 67px 48px 48px;
+    }
+    .contact-form .title {
+        margin-bottom: 32px;
     }
 }
 
@@ -532,17 +554,24 @@ and (max-width: 768px) {
     }
     .menu-open .header {
         background: #000;
-        /* height: 100vh; */
+        height: 100vh;
+        width: 100%;
         position: relative;
     }
 	.menu-open .logo {
         position: absolute;
-        top: 20px;
+        top: 24px;
         right: 20px;
         z-index: 2;
+        width: 80px;
+        height: 48px;
     }
     .menu-open .logo svg * {
         fill: #fff;
+    }
+    .menu-open .logo svg {
+        width: 80px;
+        height: 48px;
     }
     .menu-open .btn-burger .btn-burger-line:after,
     .menu-open .btn-burger .btn-burger-line:before {
@@ -557,18 +586,45 @@ and (max-width: 768px) {
     .menu-open .btn-burger .btn-burger-line:after {
         transform: rotate(-45deg) translate(6px, -12px);
     }
+    .menu-open .list {
+        display: flex;
+        flex-direction: column;
+        padding: 48px 20px;
+        margin: 0;
+    }
+    .menu-open .list .list-item:last-child{
+        margin-bottom: 0;
+    }
+    .menu-open .list .list-item {
+        margin: 0 0 48px;
+    }
     .menu-open .header-form {
         display: flex;
+        flex-direction: column;
+        margin: 42px 20px 20px ;
+        padding: 0;
+        height: 150px;
     }
+    .menu-open .header-button {
+        top: 169px;
+		left: 0px;
+		width: 100%;
+    }
+    .menu-open .header-textarea {
+		text-align: center;
+		padding: 20px;
+		height: 150px;
+	}
     
     /*content*/
     .content {
-        width: 335px;
+        max-width: 728px;
+        padding: 0 20px;
     }
     .about {
         font-size: 16px;
         line-height: 20px;
-        padding: 29px 0;
+        padding: 0 0 23px;
     }
     .title {
         font-size: 20px;
@@ -621,7 +677,7 @@ and (max-width: 768px) {
 }
 @media only screen
 and (min-width: 0)
-and (max-width: 375px) {
+and (max-width: 376px) {
     .btn-burger {
         display: block;
         top: 23px;
@@ -641,17 +697,38 @@ and (max-width: 375px) {
     }
     .header {
 		position: absolute;
+    }
+    .carousel .slick-dots li {
+		margin: 24px 4px;
+		font-size: 0;
+	}
+	.carousel .slick-dots li button {
+		width: 8px;
+		height: 8px;
+		border: solid 1px #000000;
 	}
     .menu-open .header {
         background: #000;
+        height: 100vh;
+        width: 100%;
         position: absolute;
+        z-index: 1;
     }
 	.menu-open .logo {
-        top: 20px;
+        width: 80px;
+        height: 48px;
+        display: block;
+        position: absolute;
+        z-index: 3;
+        top: 24px;
         right: 20px;
     }
     .menu-open .logo svg * {
         fill: #fff;
+    }
+    .menu-open .logo svg {
+        width: 80px;
+        height: 48px;
     }
     .menu-open .btn-burger .btn-burger-line:after,
     .menu-open .btn-burger .btn-burger-line:before {
@@ -666,19 +743,46 @@ and (max-width: 375px) {
     .menu-open .btn-burger .btn-burger-line:after {
         transform: rotate(-45deg) translate(6px, -12px);
     }
-    .menu-open .header .form {
-        display: block;
+    .menu-open .list {
+        display: flex;
+        flex-direction: column;
+        padding: 48px 20px;
+        margin: 0;
     }
+    .menu-open .list .list-item:last-child{
+        margin-bottom: 0;
+    }
+    .menu-open .list .list-item {
+        margin: 0 0 48px;
+    }
+    .menu-open .header-form {
+        display: flex;
+        flex-direction: column;
+        margin: 42px 20px 20px ;
+        padding: 0;
+        height: 150px;
+    }
+    .menu-open .header-button {
+        top: 169px;
+		left: 0px;
+		width: 100%;
+    }
+    .menu-open .header-textarea {
+		text-align: center;
+		padding: 20px;
+		height: 150px;
+	}
 
     
     /*content*/
     .content {
-        width: 335px;
+        max-width: 375px;
+        padding: 0 20px;
     }
     .about {
         font-size: 16px;
         line-height: 20px;
-        padding: 29px 0;
+        padding: 0 0 23px;
     }
     .title {
         font-size: 20px;
