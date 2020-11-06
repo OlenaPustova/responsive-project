@@ -182,8 +182,7 @@ display: none;
     font-size: 18px;
     line-height: 22px;
     color: #000;
-    opacity: 0.5;
-    padding: 0px 0px 0px 30px;
+    padding: 40px 0px 40px 30px;
     overflow: auto;
     flex-grow: 1;
     resize: none;
@@ -192,8 +191,10 @@ display: none;
     outline: none;
 }
 .textarea::placeholder {
-    line-height: 110px;
+    line-height: 40px;
     opacity: 1;
+    color: #000;
+    opacity: 0.5;
     transition: opacity 0.3s ease;
 }
 .textarea:focus::placeholder {
