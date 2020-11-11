@@ -275,17 +275,16 @@ body {
     border: none;
     line-height: 22px;
     color: #000;
-    opacity: 0.5;
-    padding: 5px 0 5px 30px;
+    padding: 40px 0 40px 30px;
     overflow: auto;
     flex-grow: 1;
     resize: none;
-}
-.textarea:focus {
     outline: none;
 }
 .textarea::placeholder {
-    line-height: 112px;
+    line-height: 40px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
 }
 .textarea:focus::placeholder {
     opacity: 0;
