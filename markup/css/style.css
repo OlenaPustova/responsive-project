@@ -530,7 +530,7 @@ body {
     }
     .menu-open .header {
         background: #000;
-        height: 100vh;
+        min-height: 100vh;
         width: 100%;
         position: relative;
         padding: 80px 0;
@@ -588,6 +588,8 @@ body {
         bottom: -80px;
         left: 0;
         width: 100%;
+        font-size: 24px;
+        line-height: 29px;
     }
     .menu-open .header-textarea {
         text-align: center;
@@ -598,7 +600,6 @@ body {
     .content {
         width: 100%;
         padding: 0 20px;
-
     }
     .about {
         font-size: 16px;
@@ -746,6 +747,8 @@ body {
         bottom: -80px;
         left: 0;
         width: 100%;
+        font-size: 24px;
+        line-height: 29px;
     }
     .menu-open .header-textarea {
         text-align: center;
