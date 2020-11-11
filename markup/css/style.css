@@ -166,8 +166,8 @@ body {
 .header-button {
     font: 28px 'Montserrat', sans-serif;
     position: absolute;
-    top: 30px;
     right: 30px;
+    bottom: 30px;
     width: 200px;
     height: 60px;
     background: #fff;
@@ -272,9 +272,6 @@ body {
 .textarea {
     font: 18px 'Montserrat', sans-serif;
     margin: 0;
-    flex-basis: 75%;
-    min-height: 120px;
-    max-height: 120px;
     border: none;
     line-height: 22px;
     color: #000;
@@ -504,13 +501,14 @@ body {
 
 @media only screen and (min-width: 376px) and (max-width: 768px) {
     .wrapper {
-        padding: 0 20px;
+        padding: 0;
+        margin: 0;
     }
     /* header */
     .btn-burger {
         display: block;
         top: 23px;
-        left: 0;
+        left: 20px;
     }
     .nav {
         display: none;
@@ -535,8 +533,7 @@ body {
         height: 100vh;
         width: 100%;
         position: relative;
-        z-index: 1;
-        overflow: auto;
+        padding: 80px 0;
     }
     .menu-open .logo {
         position: absolute;
@@ -588,7 +585,7 @@ body {
         height: 150px;
     }
     .menu-open .header-button {
-        top: 169px;
+        bottom: -80px;
         left: 0;
         width: 100%;
     }
@@ -600,6 +597,8 @@ body {
     /* content */
     .content {
         width: 100%;
+        padding: 0 20px;
+
     }
     .about {
         font-size: 16px;
@@ -744,7 +743,7 @@ body {
         height: 150px;
     }
     .menu-open .header-button {
-        top: 169px;
+        bottom: -80px;
         left: 0;
         width: 100%;
     }
