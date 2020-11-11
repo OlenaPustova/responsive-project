@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
     <title>Responsive Page</title>
 </head>
 
 <body>
-    <div id="wrapperID" class="wrapper">
+    <div id="wrapper" class="wrapper">
         <header class="header">
             <a href="#" class="logo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100" height="60" fill="none" viewBox="0 0 100 60">
@@ -30,12 +32,11 @@
                 <li class="list-item"><a class="list-link" href="#history">history</a></li>
                 <li class="list-item"><a class="list-link" href="#contact-us">contact us</a></li>
             </ul>
-            <button id="burgerID" class="btn-burger">
+            <button id="burger" class="btn-burger">
                 <span class="btn-burger-line"></span>
             </button>
             <form class="header-form">
-                <textarea class="header-textarea" placeholder="type your message here"
-                    contenteditable="true"></textarea>
+                <textarea class="header-textarea" placeholder="type your message here" contenteditable="true"></textarea>
                 <button class="header-button" type="submit">send</button>
             </form>
         </header>
@@ -71,17 +72,9 @@
         <div class="content">
             <section class="about">
                 <p>
-                    Suspendisse potenti. Curabitur in leo non odio hendrerit semper. Morbi id tempor eros. Donec viverra
-                    tempor congue. Suspendisse quis felis ultricies, egestas tellus non, semper est. Donec et interdum
-                    urna,
-                    eget pharetra massa. Aliquam ac condimentum nibh. Aenean laoreet ultricies finibus. Orci varius
-                    natoque
-                    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec congue lorem odio, eu
-                    ornare
-                    nisl malesuada tincidunt. Nullam ac leo est. Donec varius neque vel ex consectetur aliquet. Aliquam
-                    venenatis vel tellus non tincidunt. In viverra tellus ut libero dapibus ullamcorper. Donec non
-                    feugiat
-                    massa.
+                    Suspendisse potenti. Curabitur in leo non odio hendrerit semper. Morbi id tempor eros. Donec viverra tempor congue. Suspendisse quis felis ultricies, egestas tellus non, semper est. Donec et interdum urna, eget pharetra massa. Aliquam ac condimentum nibh.
+                    Aenean laoreet ultricies finibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec congue lorem odio, eu ornare nisl malesuada tincidunt. Nullam ac leo est. Donec varius neque vel ex consectetur
+                    aliquet. Aliquam venenatis vel tellus non tincidunt. In viverra tellus ut libero dapibus ullamcorper. Donec non feugiat massa.
                 </p>
             </section>
             <section class="info">
@@ -89,27 +82,15 @@
                 <div class="container">
                     <div class="box">
                         <p>
-                            <span class="date">1890</span> Fusce rhoncus at sapien at sollicitudin. Quisque semper
-                            sollicitudin libero eget
-                            placerat. Aliquam
-                            quis laoreet tellus. In id congue lacus. Nulla vestibulum turpis et nisi consequat, non
-                            sagittis purus
-                            interdum. Nunc eu dolor urna. Quisque fermentum risus quam, at consectetur leo tincidunt id.
-                            Nulla
-                            facilisi.
+                            <span class="date">1890</span> Fusce rhoncus at sapien at sollicitudin. Quisque semper sollicitudin libero eget placerat. Aliquam quis laoreet tellus. In id congue lacus. Nulla vestibulum turpis et nisi consequat, non sagittis
+                            purus interdum. Nunc eu dolor urna. Quisque fermentum risus quam, at consectetur leo tincidunt id. Nulla facilisi.
                         </p>
                     </div>
                     <div class="box">
                         <p>
-                            <span class="date">1920</span> Aliquam erat volutpat. Curabitur et accumsan odio, eget
-                            scelerisque risus. Suspendisse
-                            ultrices mattis accumsan. In hac habitasse platea dictumst. In non nisl turpis. Sed sit amet
-                            purus odio.
-                            Donec aliquam leo a tortor tincidunt, vel molestie neque commodo. Ut pellentesque ut ex
-                            pulvinar
-                            aliquam. Morbi porttitor, felis quis convallis tincidunt, augue felis euismod lectus, a
-                            placerat purus
-                            justo eget magna. Mauris neque nisi, pharetra ac posuere nec, vehicula non lorem.
+                            <span class="date">1920</span> Aliquam erat volutpat. Curabitur et accumsan odio, eget scelerisque risus. Suspendisse ultrices mattis accumsan. In hac habitasse platea dictumst. In non nisl turpis. Sed sit amet purus odio.
+                            Donec aliquam leo a tortor tincidunt, vel molestie neque commodo. Ut pellentesque ut ex pulvinar aliquam. Morbi porttitor, felis quis convallis tincidunt, augue felis euismod lectus, a placerat purus justo eget magna. Mauris
+                            neque nisi, pharetra ac posuere nec, vehicula non lorem.
                         </p>
                     </div>
                 </div>
@@ -118,18 +99,17 @@
                 <h2 id="contact-us" class="title">CONTACT US</h2>
                 <form class="form">
                     <div class="area">
-                        <textarea class="textarea" placeholder="type your message here"
-                            contenteditable="true"></textarea>
+                        <textarea class="textarea" placeholder="type your message here" contenteditable="true"></textarea>
                         <button class="button" type="submit">send</button>
                     </div>
                 </form>
             </section>
         </div>
         <script type="text/javascript">
-            let wrapper = document.querySelector("#wrapperID");
-            let burger = document.querySelector("#burgerID");
+            let wrapper = document.querySelector("#wrapper");
+            let burger = document.querySelector("#burger");
 
-            burger.onclick = function () {
+            burger.onclick = function() {
                 wrapper.classList.toggle('menu-open');
             }
         </script>
@@ -137,7 +117,7 @@
         <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript" src="slick/slick.min.js"></script>
         <script type="text/javascript">
-            $(document).ready(function () {
+            $(document).ready(function() {
                 $('.carousel').slick({
                     dots: true,
                     arrows: false,
@@ -146,24 +126,21 @@
                     speed: 300,
                     slidesToShow: 3,
                     slidesToScroll: 3,
-                    responsive: [
-                        {
-                            breakpoint: 1200,
-                            settings: {
-                                slidesToShow: 2,
-                                slidesToScroll: 2,
-                                infinite: true,
-                                dots: true
-                            }
-                        },
-                        {
-                            breakpoint: 860,
-                            settings: {
-                                slidesToShow: 1,
-                                slidesToScroll: 1
-                            }
-                        },
-                    ]
+                    responsive: [{
+                        breakpoint: 1260,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            infinite: true,
+                            dots: true
+                        }
+                    }, {
+                        breakpoint: 915,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }, ]
                 });
             });
         </script>
